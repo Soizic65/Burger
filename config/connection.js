@@ -1,4 +1,3 @@
-//setup code to connect node to mysql
 
 var mysql = require('mysql');
 
@@ -9,6 +8,17 @@ var connection = mysql.createConnection({
     password: "soizic65",
     database: "burgers_db"
 });
+
+if(process.env.JAWSDB_URL){
+  connection = mysql.createConnection(process.env.JAWSDB_URL);
+} else{
+  connection = mysql.createConnection({
+    host: 'localhost',
+    user: 'root',
+    password: 'hacktheplanet',
+    database: 'todoagain_db'
+  });
+};
 
 connection.connect(function(err) {
     if (err) {
