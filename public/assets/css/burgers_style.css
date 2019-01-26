@@ -1,0 +1,11 @@
+
+body{
+    background-color: lightblue;
+}
+
+.jumbotron{
+    background-image: url('../images/jumboback.jpg');
+}
+h1{
+    color:blue;
+}
